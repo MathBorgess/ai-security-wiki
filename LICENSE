@@ -1,0 +1,12 @@
+This repository uses separate licenses for software and knowledge content.
+
+Original software in src/, scripts/, test/ and executable examples is licensed
+under the Apache License, Version 2.0. Copyright 2026 Matheus Borges.
+See LICENSES/Apache-2.0.txt.
+
+DASF-derived data, wiki pages, documentation and the audit-ai-security skill
+are distributed under Creative Commons Attribution-ShareAlike 4.0 International.
+See LICENSES/CC-BY-SA-4.0.txt and NOTICE for attribution and changes.
+
+Third-party dependencies retain their own licenses. Databricks and other names
+and marks remain the property of their respective owners. No endorsement is granted.

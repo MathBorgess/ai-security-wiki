@@ -1,0 +1,24 @@
+# AI Security Wiki
+
+> A source-traceable DASF 3.0 reference and local MCP for defensive AI security assessment. Snapshot 2026-10-22. Classify the whole system before selecting risks and controls. Catalog matches are not findings.
+
+## Start
+
+- [Knowledge index](wiki/index.md): component and deployment navigation
+- [Audit method](wiki/methodology.md): intake, classification, filtering, evidence, remediation, explanation
+- [Source issues](wiki/source-issues.md): blanks, asymmetric links and prompt-injection applicability caveat
+- [Sources](wiki/sources.md): provenance, inspected scope and update contract
+- [Machine catalog](data/catalog.json): all risks, controls, mappings and metadata
+- [Snapshot manifest](sources/manifest.json): counts and content hashes
+
+## Use
+
+- [MCP integration](docs/mcp.md): tools, resources and prompts
+- [Audit skill](skills/audit-ai-security/SKILL.md): ordered reusable workflow and references
+- [Agent/MCP boundaries](wiki/agent-security.md): concrete trust-boundary investigation
+- [Synthetic correction](examples/tenant-boundary.md): executed before/after example
+- [Validation](docs/validation.md): verified behaviors and unrun evaluations
+
+## Language
+
+- [Português](README.pt-BR.md): purpose and usage in Brazilian Portuguese

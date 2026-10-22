@@ -1,0 +1,9 @@
+node_modules/
+.venv/
+.DS_Store
+*.log
+*.tgz
+.env
+.env.*
+private/
+audits/

@@ -1,0 +1,75 @@
+# Control index
+
+- [DASF-1](controls/1.md) — SSO with IdP and MFA
+- [DASF-2](controls/2.md) — Sync users and groups
+- [DASF-3](controls/3.md) — Restrict access using IP access lists
+- [DASF-4](controls/4.md) — Restrict access using private link
+- [DASF-5](controls/5.md) — Control access to data and other objects
+- [DASF-6](controls/6.md) — Classify data
+- [DASF-7](controls/7.md) — Enforce data quality checks on batch and streaming datasets
+- [DASF-8](controls/8.md) — Encrypt data at rest
+- [DASF-9](controls/9.md) — Encrypt data in transit
+- [DASF-10](controls/10.md) — Version data
+- [DASF-11](controls/11.md) — Capture and view data lineage
+- [DASF-12](controls/12.md) — Delete records from datasets
+- [DASF-13](controls/13.md) — Use near real-time data
+- [DASF-14](controls/14.md) — Audit actions performed on datasets
+- [DASF-15](controls/15.md) — Explore datasets and identify problems
+- [DASF-16](controls/16.md) — Secure model features
+- [DASF-17](controls/17.md) — Track and reproduce the training data used for ML model training
+- [DASF-18](controls/18.md) — Govern model assets
+- [DASF-19](controls/19.md) — Manage end-to-end machine learning lifecycle
+- [DASF-20](controls/20.md) — Track ML training runs
+- [DASF-21](controls/21.md) — Monitor data and AI system from a single pane of glass
+- [DASF-22](controls/22.md) — Build models with all representative, accurate and relevant data sources
+- [DASF-23](controls/23.md) — Register, version, approve, promote, deploy and monitor models
+- [DASF-24](controls/24.md) — Control access to models and model assets
+- [DASF-25](controls/25.md) — Use retrieval augmented generation (RAG) with large language models (LLMs)
+- [DASF-26](controls/26.md) — Fine-tune large language models (LLMs)
+- [DASF-27](controls/27.md) — Pretrain a large language model (LLM)
+- [DASF-28](controls/28.md) — Create model aliases, tags and annotations
+- [DASF-29](controls/29.md) — Build MLOps workflows
+- [DASF-30](controls/30.md) — Encrypt models
+- [DASF-31](controls/31.md) — Secure model serving endpoints
+- [DASF-32](controls/32.md) — Govern and monitor access of AI model and model serving endpoints
+- [DASF-33](controls/33.md) — Manage credentials securely
+- [DASF-34](controls/34.md) — Run models in multiple layers of isolation
+- [DASF-35](controls/35.md) — Track model performance
+- [DASF-36](controls/36.md) — Set up monitoring alerts
+- [DASF-37](controls/37.md) — Set up inference tables for monitoring and debugging models
+- [DASF-38](controls/38.md) — Platform security — penetration testing, red teaming, bug bounty and vulnerability management
+- [DASF-39](controls/39.md) — Platform security — Incident Response Team
+- [DASF-40](controls/40.md) — Platform security — internal access
+- [DASF-41](controls/41.md) — Platform security — secure SDLC
+- [DASF-42](controls/42.md) — Employ data-centric MLOps and LLMOps
+- [DASF-43](controls/43.md) — Use access control lists
+- [DASF-44](controls/44.md) — Triggering actions in response to a specific event
+- [DASF-45](controls/45.md) — Evaluate models
+- [DASF-46](controls/46.md) — Store and retrieve embeddings securely
+- [DASF-47](controls/47.md) — Compare LLM outputs on set prompts
+- [DASF-48](controls/48.md) — Use hardened Runtime for Machine Learning
+- [DASF-49](controls/49.md) — Automate LLM evaluation
+- [DASF-50](controls/50.md) — Platform compliance
+- [DASF-51](controls/51.md) — Share data and AI assets securely
+- [DASF-52](controls/52.md) — Source code control
+- [DASF-53](controls/53.md) — Third-party library control
+- [DASF-54](controls/54.md) — Implement AI guardrails
+- [DASF-55](controls/55.md) — Monitor audit logs
+- [DASF-56](controls/56.md) — Restrict outbound connections from models
+- [DASF-57](controls/57.md) — Use attribute-based access controls (ABAC)
+- [DASF-58](controls/58.md) — Protect data with filters and masking
+- [DASF-59](controls/59.md) — Use clean rooms
+- [DASF-60](controls/60.md) — Rate limit number of inference queries
+- [DASF-61](controls/61.md) — Train users on AI risk taxonomy and AI/ML security
+- [DASF-62](controls/62.md) — Implement network segmentation
+- [DASF-63](controls/63.md) — Update software
+- [DASF-64](controls/64.md) — Limit access from AI models and agents
+- [DASF-65](controls/65.md) — Implement end-to-end AI traceability
+- [DASF-66](controls/66.md) — Use Human-in-the-loop feedback
+- [DASF-67](controls/67.md) — Federate authentication
+- [DASF-68](controls/68.md) — Use Securely Hosted Managed MCP Servers
+- [DASF-69](controls/69.md) — Securely host Custom MCP Servers
+- [DASF-70](controls/70.md) — Securely connect to External MCP Servers
+- [DASF-71](controls/71.md) — Log and register AI agents
+- [DASF-72](controls/72.md) — Securely store and reuse agent state
+- [DASF-73](controls/73.md) — Register prompts

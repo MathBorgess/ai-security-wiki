@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "retrieved_on": "2026-10-22",
+  "framework_version": "3.0",
+  "hashes": {
+    "sources/compendium.json": "d255088da033a186739ad703a602cbeb0eafbae66610f2c787c1a4bae675795c",
+    "data/catalog.json": "32ddfd37d2702bb2f868f8f1f30b46c8b0e1f38cec7dc23f3bbbbcc3a2deb524"
+  },
+  "counts": {
+    "risks": 97,
+    "controls": 73,
+    "components": 13,
+    "deployment_patterns": 7,
+    "risk_control_edges": 804,
+    "third_party_tool_entries": 46
+  },
+  "applicability_counts": {
+    "predictive-ml": 61,
+    "rag": 34,
+    "fine-tuned-llm": 50,
+    "pre-trained-llm": 52,
+    "foundation-llm": 17,
+    "external-model": 14,
+    "agentic-ai": 35
+  },
+  "exclusions": [
+    "DASF Risk Applicability",
+    "DASF Control Applicability"
+  ]
+}

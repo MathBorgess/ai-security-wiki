@@ -1,0 +1,16 @@
+# Methods and decision trail
+
+| ID | Condition | Action | Observable check | Exception | Evidence |
+|---|---|---|---|---|---|
+| M1 | Any assessment request | Establish use case, stakeholders, datasets, applications, obligations and authorized scope | Explicit intake and target boundaries | Missing input permits only a provisional plan | S2 §1.2 pp. 8–10; S4 intake; documented workflow with project authorization adaptation |
+| M2 | System type is not fully established | Identify all seven deployment features and their yes/no/unknown state | Classification rationale and unresolved questions | A mixed system selects multiple patterns | S1 risk columns H–N; S2 p. 9; S4 multiselect; documented taxonomy with tri-state adaptation |
+| M3 | Deployment patterns are known | Union source Yes risks and deduplicate their forward-linked controls | Selected risk IDs, matching columns, control IDs and row citations | Blanks stay unspecified; No does not prove absence | S1 risk columns E and H–N; S4 filtering; documented selection, project provenance implementation |
+| M4 | Source and architecture conflict | Preserve original mapping and add a separately labelled architecture review | Source deviation, rationale and owner are explicit | Never silently rewrite source truth | S1 observed 9.1 matrix and asymmetric links; project adaptation |
+| M5 | A plausible risk is selected | Define a falsifiable hypothesis, inspect evidence, then test synthetic cases with legitimate comparisons | Expected/observed results, versions, authorization and artifact references | No permission for active tests means evidence review only | S2 pp. 99–103 automated/manual testing; project evidence and authorization adaptation |
+| M6 | Tools, MCP, memory or delegation cross trust boundaries | Trace identity, consent, scope, token audience, state ownership and egress at each hop | Boundary-specific denial evidence and attributable effects | Local stdio and remote OAuth have different deployment requirements | S3 component-13 organization; S5 named security sections; documented threats with project checklist adaptation |
+| M7 | Evidence supports a control gap | Propose a minimal change, owner, rollback and acceptance test; retest prohibited and legitimate behavior | Evidence of enforcement and stated residual risk | Control description or product presence never counts as a passed test | S1 mitigation descriptions; S2 p. 10 and pp. 100–103; project remediation contract |
+| M8 | User asks to understand the failure | Explain mechanism, observed/hypothetical impact, correction and verification in the user’s language | Clear evidence labels, concrete example and source IDs | No verified observation means explain a possible risk, not a confirmed incident | S2 intended audiences pp. 7–8; project communication adaptation |
+
+## Resolving tensions
+
+Source filtering (M3) offers reproducibility; architecture review (M4) prevents false exclusions. Keep both views with provenance. A guardrail recommendation (S1 DASF-54) does not override the downstream authorization requirements (M6/S5). Traceability (S1 DASF-65) is implemented with observable decisions and effects; private hidden model reasoning is not required. Full coverage never overrides the authorized testing boundary (M1/M5).

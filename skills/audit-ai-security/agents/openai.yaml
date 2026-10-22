@@ -1,0 +1,3 @@
+interface:
+  display_name: "Audit AI Security"
+  short_description: "Investigate AI risks and propose evidence-backed defenses"

@@ -1,0 +1,29 @@
+AI Security Wiki
+Copyright 2026 Matheus Borges (original software, compilation and adaptations).
+
+The Databricks AI Security Framework (DASF) is authored by Databricks and its
+contributors. This independent project indexes the official DASF v3 compendium:
+https://docs.google.com/spreadsheets/d/1lD5nKC1QNoUTDXdMp31NA9eKcUYGjhtC34MCfQpqpGo/edit
+Snapshot: 2026-10-22.
+
+License basis: the DASF Version 2.0 whitepaper, page 121, states Creative Commons
+Attribution-Share Alike 4.0. The v3 compendium is the framework's updated companion
+catalog; its workbook does not embed a separate license statement. This project
+preserves attribution and ShareAlike for all DASF-derived knowledge and does not
+claim a new permissive software license over that material.
+https://www.databricks.com/sites/default/files/2025-02/databricks-ebook-dasf-2.pdf
+https://creativecommons.org/licenses/by-sa/4.0/
+
+Changes: public reference tabs extracted; assessment templates excluded; whitespace
+and XLSX control-character escapes normalized; canonical IDs, graph, source-row
+locators, linked wiki pages and indexes compiled. Original verification guidance,
+audit workflow, skill, explanations and source issue analysis are clearly labelled
+adaptations. No source discrepancy is silently corrected.
+
+MCP protocol documentation and SDK are additional primary references; dependency
+licenses remain with their authors. External framework labels and tool listings
+are source-reported claims, not independently verified certifications or endorsements.
+
+No affiliation with, sponsorship by or endorsement from Databricks, MCP maintainers
+or other referenced organizations is implied. This project does not represent a
+measured security outcome, a professional certification or legal advice.

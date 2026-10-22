@@ -1,0 +1,40 @@
+# Validation and evidence limits
+
+Observed on **2026-10-22**, Node.js 24.16.0, local macOS. The original extraction used the official public XLSX. The user-supplied copy was compared against the official risk and control tables; differences were limited to character encoding. Private assessment-template content was not published.
+
+## Observed software results
+
+| Check | Observed result | What this establishes |
+|---|---|---|
+| Deterministic compilation | 196 generated artifacts match the source extraction | Reproducible transformation of the reviewed snapshot |
+| Inventory | 97 risks, 73 controls, 13 components, seven patterns, 804 forward links | Coverage of the referenced compendium tables |
+| Source applicability | Per-pattern Yes counts: 61, 34, 50, 52, 17, 14, 35 | Filtering matches the inspected source columns |
+| Compound system | RAG + foundation + external + agentic selects 75 risks and 71 controls | Union/dedup behavior; supporting risks are retained |
+| Source discrepancies | Ten controls have nonreciprocal source links; blanks remain null | Differences are visible instead of silently repaired |
+| Software suite | 12 tests passed | Catalog invariants, classification, scoping, search, errors and protocol behavior described below |
+| MCP integration | Real SDK client called all ten tools and read all 170 risk/control resources | Usable stdio tool/resource/prompt surface, including execution from a different working directory |
+| Legacy interoperability | 2025-11-25 initialize/list/call sequence passed | That tested protocol sequence works alongside the current SDK client |
+| Synthetic security example | Vulnerable cross-tenant read reproduced; corrected read denied; legitimate read succeeds | The in-memory authorization example enforces its tested boundary |
+| Skill structure | Factory package checker returned ok=true | Required package files and metadata exist; not domain validation |
+| Dependency advisory scan | npm audit --omit=dev reported zero findings at inspection | No known advisory reported by that registry check at that time; not proof of absence |
+
+Tests exercise malformed pattern lists, oversized inputs, unknown IDs, arbitrary resource paths, untrusted observations, source citations, all record lookups and the absence of an automatic “verified” claim. Source-specific assertions include the surprising 9.1 applicability row; a separate project-authored review candidate keeps it visible for RAG and agentic systems.
+
+Run `npm run check` and `npm run demo` to reproduce the executable checks. GitHub CI additionally targets Node 22 and 24; inspect the actual check run for its current status rather than treating the configuration as a result.
+
+## Skill evaluation status: unvalidated
+
+The package has four practical cases (normal, missing input, conflicting guidance, out of scope), five trigger prompts and two source-backed review lenses. Four cases were exercised as a same-session author walkthrough, using actual outputs from the server’s domain functions for the relevant steps. Both lenses accepted the four walkthrough outputs (4/4). This is a self-review of synthetic artifacts, not an independent domain benchmark.
+
+An independent without-skill baseline and actual native-host automatic discovery were **not run**. Baseline cases executed: none (four planned, excluded from denominators). Actual trigger selections executed: none (five planned, excluded from denominators). No performance improvement, trigger accuracy or generalization rate is claimed. Private prompts, tool outputs, critiques and limitations are retained outside this public repository.
+
+## Not established
+
+- Protection or compliance of a real ML, GenAI or agentic deployment.
+- Successful adversarial evaluation against a real LLM or live third-party system.
+- Equivalent behavior in every agent host; native registration and selection are host-dependent.
+- Exact parity with a particular private Databricks Academy course revision.
+- Completeness or currency of every external standard mapping and vendor documentation link.
+- Independent expert acceptance, owner learning, community uptake, career benefit or revenue.
+
+The repository can be used as a reference and tested software while those limits remain explicit. Do not promote a successful structural or protocol test into a claim of security effectiveness.
