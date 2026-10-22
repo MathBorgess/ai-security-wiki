@@ -93,7 +93,10 @@ const catalog = {
   source_issues: issues,
 };
 const generated = new Map();
-const emit = (path, value) => generated.set(path, value.endsWith('\n') ? value : value + '\n');
+const emit = (path, value) => {
+  const normalized = path.endsWith('.md') ? value.replace(/[ \t]+$/gm, '') : value;
+  generated.set(path, normalized.endsWith('\n') ? normalized : normalized + '\n');
+};
 const json = value => JSON.stringify(value, null, 2) + '\n';
 emit('data/catalog.json', json(catalog));
 emit('sources/manifest.json', json({ schema_version: 1, retrieved_on: raw.retrieved_on, framework_version: raw.version,
