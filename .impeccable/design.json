@@ -1,0 +1,252 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-22T14:09:40.625023Z",
+  "title": "Design System: AI Security Wiki",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "primary",
+        "displayName": "Forest ink",
+        "tonalRamp": [
+          "oklch(15.00% 0.04402 174.33)",
+          "oklch(26.43% 0.04402 174.33)",
+          "oklch(37.86% 0.04402 174.33)",
+          "oklch(49.29% 0.04402 174.33)",
+          "oklch(60.71% 0.04402 174.33)",
+          "oklch(72.14% 0.04402 174.33)",
+          "oklch(83.57% 0.04402 174.33)",
+          "oklch(95.00% 0.04402 174.33)"
+        ]
+      },
+      "text": {
+        "role": "neutral",
+        "displayName": "Reading green",
+        "tonalRamp": [
+          "oklch(15.00% 0.03690 170.87)",
+          "oklch(26.43% 0.03690 170.87)",
+          "oklch(37.86% 0.03690 170.87)",
+          "oklch(49.29% 0.03690 170.87)",
+          "oklch(60.71% 0.03690 170.87)",
+          "oklch(72.14% 0.03690 170.87)",
+          "oklch(83.57% 0.03690 170.87)",
+          "oklch(95.00% 0.03690 170.87)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted green",
+        "tonalRamp": [
+          "oklch(15.00% 0.02998 168.26)",
+          "oklch(26.43% 0.02998 168.26)",
+          "oklch(37.86% 0.02998 168.26)",
+          "oklch(49.29% 0.02998 168.26)",
+          "oklch(60.71% 0.02998 168.26)",
+          "oklch(72.14% 0.02998 168.26)",
+          "oklch(83.57% 0.02998 168.26)",
+          "oklch(95.00% 0.02998 168.26)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "White paper",
+        "tonalRamp": [
+          "oklch(15.00% 0.00000 0.00)",
+          "oklch(26.43% 0.00000 0.00)",
+          "oklch(37.86% 0.00000 0.00)",
+          "oklch(49.29% 0.00000 0.00)",
+          "oklch(60.71% 0.00000 0.00)",
+          "oklch(72.14% 0.00000 0.00)",
+          "oklch(83.57% 0.00000 0.00)",
+          "oklch(95.00% 0.00000 0.00)"
+        ]
+      },
+      "wash": {
+        "role": "neutral",
+        "displayName": "Pale green wash",
+        "tonalRamp": [
+          "oklch(15.00% 0.00827 157.09)",
+          "oklch(26.43% 0.00827 157.09)",
+          "oklch(37.86% 0.00827 157.09)",
+          "oklch(49.29% 0.00827 157.09)",
+          "oklch(60.71% 0.00827 157.09)",
+          "oklch(72.14% 0.00827 157.09)",
+          "oklch(83.57% 0.00827 157.09)",
+          "oklch(95.00% 0.00827 157.09)"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Sage rule",
+        "tonalRamp": [
+          "oklch(15.00% 0.02394 161.62)",
+          "oklch(26.43% 0.02394 161.62)",
+          "oklch(37.86% 0.02394 161.62)",
+          "oklch(49.29% 0.02394 161.62)",
+          "oklch(60.71% 0.02394 161.62)",
+          "oklch(72.14% 0.02394 161.62)",
+          "oklch(83.57% 0.02394 161.62)",
+          "oklch(95.00% 0.02394 161.62)"
+        ]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Pale leaf",
+        "tonalRamp": [
+          "oklch(15.00% 0.11472 129.60)",
+          "oklch(26.43% 0.11472 129.60)",
+          "oklch(37.86% 0.11472 129.60)",
+          "oklch(49.29% 0.11472 129.60)",
+          "oklch(60.71% 0.11472 129.60)",
+          "oklch(72.14% 0.11472 129.60)",
+          "oklch(83.57% 0.11472 129.60)",
+          "oklch(95.00% 0.11472 129.60)"
+        ]
+      },
+      "focus": {
+        "role": "interaction",
+        "displayName": "Focus blue",
+        "tonalRamp": [
+          "oklch(15.00% 0.15975 258.30)",
+          "oklch(26.43% 0.15975 258.30)",
+          "oklch(37.86% 0.15975 258.30)",
+          "oklch(49.29% 0.15975 258.30)",
+          "oklch(60.71% 0.15975 258.30)",
+          "oklch(72.14% 0.15975 258.30)",
+          "oklch(83.57% 0.15975 258.30)",
+          "oklch(95.00% 0.15975 258.30)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display"
+      },
+      "headline": {
+        "displayName": "Headline"
+      },
+      "title": {
+        "displayName": "Title"
+      },
+      "body": {
+        "displayName": "Body"
+      },
+      "lead": {
+        "displayName": "Lead"
+      },
+      "label": {
+        "displayName": "Label"
+      },
+      "action": {
+        "displayName": "Action"
+      },
+      "navigation": {
+        "displayName": "Navigation"
+      },
+      "table": {
+        "displayName": "Table"
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "anchor-scroll",
+        "value": "scroll-behavior: smooth",
+        "purpose": "Document anchor navigation."
+      },
+      {
+        "name": "reduced-motion-scroll",
+        "value": "scroll-behavior: auto",
+        "purpose": "Applied under prefers-reduced-motion: reduce."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "contents-hidden",
+        "value": "1180px"
+      },
+      {
+        "name": "single-column",
+        "value": "760px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary action",
+      "kind": "button",
+      "refersTo": "action-primary",
+      "description": "Navigation anchor matching the implemented homepage action.",
+      "html": "<a class=\"ds-action-primary\" href=\"./guides/agent-security-checklist.html\">Start the audit checklist</a>",
+      "css": ".ds-action-primary{display:inline-block;font-family:'Source Sans', sans-serif;font-size:1.05rem;font-weight:650;line-height:1.65;padding:.65rem 1rem;border:1px solid var(--ink, #183b32);text-decoration:none;background:var(--ink, #183b32);color:var(--paper, #fff)}.ds-action-primary:hover{background:var(--wash, #edf3ef);color:var(--ink, #183b32)}.ds-action-primary:focus-visible{outline:3px solid var(--focus, #1759b5);outline-offset:4px}"
+    },
+    {
+      "name": "Secondary action",
+      "kind": "button",
+      "refersTo": "action-secondary",
+      "description": "Navigation anchor matching the implemented homepage action.",
+      "html": "<a class=\"ds-action-secondary\" href=\"./docs/clients.html\">Connect your agent</a>",
+      "css": ".ds-action-secondary{display:inline-block;font-family:'Source Sans', sans-serif;font-size:1.05rem;font-weight:650;line-height:1.65;padding:.65rem 1rem;border:1px solid var(--ink, #183b32);text-decoration:none;background:var(--paper, #fff);color:var(--ink, #183b32)}.ds-action-secondary:hover{background:var(--wash, #edf3ef);color:var(--ink, #183b32)}.ds-action-secondary:focus-visible{outline:3px solid var(--focus, #1759b5);outline-offset:4px}"
+    },
+    {
+      "name": "Reference search",
+      "kind": "input",
+      "refersTo": "search-input",
+      "description": "Native query field; this preview does not run filtering.",
+      "html": "<label class=\"ds-query-label\" for=\"ds-query\">Find a risk or control<input class=\"ds-query\" id=\"ds-query\" type=\"search\" placeholder=\"Try prompt injection, memory or DASF-64\" autocomplete=\"off\"></label>",
+      "css": ".ds-query-label{font-family:'Source Sans', sans-serif;font-size:1rem;font-weight:650;line-height:1.65;color:var(--text, #243f36)}.ds-query{display:block;width:100%;margin-top:.4rem;min-height:48px;border:1px solid var(--muted, #52685f);border-radius:4px;background:var(--paper, #fff);color:var(--text, #243f36);font:inherit;padding:.6rem .8rem}.ds-query::placeholder{color:var(--muted, #52685f);font-weight:400}.ds-query:focus-visible{outline:3px solid var(--focus, #1759b5);outline-offset:4px}"
+    },
+    {
+      "name": "Reference type filter",
+      "kind": "input",
+      "refersTo": "search-select",
+      "description": "Native risk/control category selection.",
+      "html": "<label class=\"ds-kind-label\" for=\"ds-kind\">Show<select class=\"ds-kind\" id=\"ds-kind\"><option>Risks and controls</option><option>Risks</option><option>Controls</option></select></label>",
+      "css": ".ds-kind-label{font-family:'Source Sans', sans-serif;font-size:1rem;font-weight:650;line-height:1.65;color:var(--text, #243f36)}.ds-kind{display:block;width:100%;margin-top:.4rem;min-height:48px;border:1px solid var(--muted, #52685f);border-radius:4px;background:var(--paper, #fff);color:var(--text, #243f36);font:inherit;padding:.6rem .8rem}.ds-kind:focus-visible{outline:3px solid var(--focus, #1759b5);outline-offset:4px}"
+    },
+    {
+      "name": "Reference rail",
+      "kind": "nav",
+      "refersTo": "reference-rail",
+      "description": "Native disclosure and current-page treatment; preview starts open.",
+      "html": "<aside class=\"ds-rail\"><details open><summary>In this reference</summary><nav aria-label=\"Documentation\"><a href=\"./guides/agent-security-checklist.html\" aria-current=\"page\">Audit checklist</a><a href=\"./guides/mcp-security.html\">MCP security</a><a href=\"./guides/prompt-injection.html\">Prompt injection</a><a href=\"./docs/clients.html\">Connect your agent</a></nav></details></aside>",
+      "css": ".ds-rail{font-family:'Source Sans', sans-serif;font-size:1rem;line-height:1.65;background:var(--wash, #edf3ef);color:var(--text, #243f36);padding:1.25rem}.ds-rail summary{font-weight:700;cursor:pointer}.ds-rail nav{display:grid;gap:.25rem;margin-top:1rem}.ds-rail a{display:block;color:var(--ink, #183b32);padding:.45rem 0;line-height:1.35;text-decoration:none;text-underline-offset:.2em}.ds-rail a:hover,.ds-rail a[aria-current]{text-decoration:underline;font-weight:650}.ds-rail a:focus-visible,.ds-rail summary:focus-visible{outline:3px solid var(--focus, #1759b5);outline-offset:4px}@media(max-width:760px){.ds-rail{padding:1rem}.ds-rail nav{grid-template-columns:1fr 1fr;column-gap:1.2rem}}"
+    },
+    {
+      "name": "Reference register",
+      "kind": "custom",
+      "refersTo": "reference-table",
+      "description": "One actual catalog row demonstrating the complete register pattern.",
+      "html": "<div class=\"ds-table-wrap\"><table class=\"ds-table\"><thead><tr><th scope=\"col\">Reference</th><th scope=\"col\">Name</th><th scope=\"col\">Type</th></tr></thead><tbody><tr><td><a href=\"./wiki/risks/1.1.html\">DASF-R-1.1</a></td><td><a href=\"./wiki/risks/1.1.html\">Insufficient access controls</a></td><td>Risk</td></tr></tbody></table></div>",
+      "css": ".ds-table-wrap{overflow:auto}.ds-table{width:100%;border-collapse:collapse;font-family:'Source Sans', sans-serif;font-size:1rem;font-variant-numeric:tabular-nums;margin:1.5rem 0;line-height:1.45;color:var(--text, #243f36)}.ds-table th{text-align:left;background:var(--wash, #edf3ef);font-weight:650}.ds-table td,.ds-table th{padding:.8rem .7rem;border-bottom:1px solid var(--rule, #b9cbc1);vertical-align:top;overflow-wrap:anywhere}.ds-table td:first-child{white-space:nowrap;width:135px}.ds-table td:last-child{width:85px;color:var(--muted, #52685f)}.ds-table tbody tr:hover{background:var(--wash, #edf3ef)}.ds-table a{display:block;color:var(--ink, #183b32);text-decoration:none;text-underline-offset:.2em}.ds-table a:hover{text-decoration:underline}.ds-table a:focus-visible{outline:3px solid var(--focus, #1759b5);outline-offset:4px}@media(max-width:760px){.ds-table{font-size:.95rem}.ds-table td,.ds-table th{padding:.7rem .4rem}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Annotated standards library",
+    "overview": "A dark forest masthead, pale green navigation and white reading surface frame source-backed technical material. Serif document titles give the library a distinct voice; sans-serif text, ordinary links and reference rows support close reading. Density belongs in the register, while prose keeps a generous reading measure.\n\nThis document records the implementation on 2026-10-22. Its metaphor and descriptive labels are implementation decisions, not owner visual acceptance. The owner chose direct construction followed by browser review. PRODUCT.md records product constraints; .impeccable/surfaces/site-index-md.md records the page strategy. Static reading, shared Markdown content and a visible source trail constrain this system.",
+    "keyCharacteristics": [
+      "Serif titles with sans-serif reading text.",
+      "Flat rectangles, pale fills and thin rules.",
+      "Native controls and distinct keyboard focus.",
+      "Complete reference content available without JavaScript."
+    ],
+    "rules": [
+      {
+        "name": "The Flat Reference Rule",
+        "body": "Use tonal fills, rules and spacing to separate content. The current system has no shadows or lifted hover surfaces.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do preserve self-hosted typography and working font fallbacks.",
+      "Do retain visible keyboard focus, native controls and ordinary document links.",
+      "Do preserve the complete register and reading experience without JavaScript.",
+      "Do update the stylesheet, DESIGN.md and sidecar together when visual values change."
+    ],
+    "donts": [
+      "Don't introduce card grids, pills, gradients or lifted surfaces as an incidental refinement.",
+      "Don't turn risk/control labels into invented severity or compliance badges.",
+      "Don't apply the homepage title width and action arrangement to every document.",
+      "Don't treat these implementation decisions or screenshots as human approval or measured usability evidence."
+    ]
+  }
+}

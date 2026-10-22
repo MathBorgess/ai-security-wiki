@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "Please cite the project and the original DASF sources when using this reference."
+title: "AI Security Wiki: a DASF reference and defensive MCP"
+type: software
+authors:
+  - family-names: Borges
+    given-names: Matheus
+repository-code: "https://github.com/MathBorgess/ai-security-wiki"
+version: 0.1.0
+date-released: 2026-10-22
+license: "Apache-2.0 AND CC-BY-SA-4.0"
+keywords:
+  - AI security
+  - agent security
+  - DASF
+  - Model Context Protocol
+  - prompt injection
+  - security assessment

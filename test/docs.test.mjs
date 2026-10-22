@@ -6,7 +6,7 @@ import { ROOT } from '../src/knowledge.mjs';
 
 function markdownFiles(dir) {
   return readdirSync(dir, { withFileTypes: true }).flatMap(entry => {
-    if (['node_modules', '.git'].includes(entry.name)) return [];
+    if (['node_modules', '.git', '_site', '.impeccable'].includes(entry.name)) return [];
     const path = resolve(dir, entry.name);
     return entry.isDirectory() ? markdownFiles(path) : entry.name.endsWith('.md') ? [path] : [];
   });
