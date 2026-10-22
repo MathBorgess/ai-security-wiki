@@ -1,0 +1,15 @@
+{
+  "buildPath": "code",
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "design-system-font",
+        "value": "sfmono-regular",
+        "createdAt": "2026-10-22T14:25:14.396Z",
+        "reason": "Agent: site/site.css uses SFMono-Regular only as a code/pre monospace fallback, explicitly documented in DESIGN.md Typography; the rendered design is intentional."
+      }
+    ]
+  }
+}

@@ -1,4 +1,4 @@
-# AI Security Wiki
+# AI Security Wiki — DASF reference and MCP for agent security
 
 **Understand an AI system. Identify its risks. Investigate evidence. Propose a fix. Verify the result.**
 
@@ -7,6 +7,15 @@ An independent, community reference built by **Matheus Borges** around the [Data
 I started this project to study AI security in depth and make defensive knowledge easier to use at scale. The goal is to help people and agents ask better questions, trace answers to evidence and share useful improvements with the community.
 
 [Read the wiki](wiki/index.md) · [Português](README.pt-BR.md) · [Audit workflow](wiki/methodology.md) · [MCP setup](docs/mcp.md) · [Contribute](CONTRIBUTING.md)
+
+## Start with your security question
+
+- [AI agent security checklist](guides/agent-security-checklist.md): classify the architecture and inspect trust boundaries.
+- [MCP security checklist](guides/mcp-security.md): review clients, servers, credentials and tool authorization.
+- [Prompt injection in RAG and agents](guides/prompt-injection.md): trace untrusted content to a concrete effect.
+- [Use with Claude, Codex, ChatGPT or another agent](docs/clients.md): choose web reference access or local MCP integration.
+
+The [static documentation site](docs/discoverability.md) is generated from this wiki, with a searchable reference, Markdown alternates and a sitemap. To cite or adapt the work, use [CITATION.cff](CITATION.cff) and preserve the original [DASF attribution](NOTICE).
 
 ## What is included
 

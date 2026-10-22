@@ -6,6 +6,15 @@ Criei este projeto para aprofundar meu aprendizado em segurança de IA e compart
 
 [Abrir a wiki](wiki/index.md) · [Instalar o MCP](docs/mcp.md) · [Conhecer os limites](docs/validation.md)
 
+## Por onde começar
+
+- [Checklist de segurança de agentes](guides/agent-security-checklist.md): arquitetura, permissões e evidências.
+- [Segurança de MCP](guides/mcp-security.md): clientes, servidores, ferramentas e credenciais.
+- [Investigar prompt injection](guides/prompt-injection.md): do conteúdo não confiável ao efeito no sistema.
+- [Usar com Claude, Codex, ChatGPT e outros agentes](docs/clients.md): leitura pela web e instalação local são caminhos diferentes.
+
+Os guias estão em inglês. Você pode pedir ao agente uma explicação em português, preservando os IDs, fontes e limites da evidência.
+
 ## Como funciona
 
 1. **Identificar o sistema.** O agente pergunta sobre modelos, treinamento, RAG, provedores externos, memória e ferramentas. Um mesmo sistema pode combinar várias categorias.

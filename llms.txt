@@ -4,6 +4,9 @@
 
 ## Start
 
+- [AI agent security checklist](guides/agent-security-checklist.md): classify architecture and investigate trust boundaries
+- [MCP security checklist](guides/mcp-security.md): clients, servers, identity, permissions and tools
+- [Prompt injection investigation](guides/prompt-injection.md): distinguish model behavior from unauthorized effects
 - [Knowledge index](wiki/index.md): component and deployment navigation
 - [Audit method](wiki/methodology.md): intake, classification, filtering, evidence, remediation, explanation
 - [Source issues](wiki/source-issues.md): blanks, asymmetric links and prompt-injection applicability caveat
@@ -13,6 +16,7 @@
 
 ## Use
 
+- [Claude, Codex, ChatGPT and other agents](docs/clients.md): web reading versus local MCP configuration
 - [MCP integration](docs/mcp.md): tools, resources and prompts
 - [Audit skill](skills/audit-ai-security/SKILL.md): ordered reusable workflow and references
 - [Agent/MCP boundaries](wiki/agent-security.md): concrete trust-boundary investigation

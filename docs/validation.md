@@ -11,7 +11,7 @@ Observed on **2026-10-22**, Node.js 24.16.0, local macOS. The original extractio
 | Source applicability | Per-pattern Yes counts: 61, 34, 50, 52, 17, 14, 35 | Filtering matches the inspected source columns |
 | Compound system | RAG + foundation + external + agentic selects 75 risks and 71 controls | Union/dedup behavior; supporting risks are retained |
 | Source discrepancies | Ten controls have nonreciprocal source links; blanks remain null | Differences are visible instead of silently repaired |
-| Software suite | 12 tests passed | Catalog invariants, classification, scoping, search, errors and protocol behavior described below |
+| Software suite | 17 tests passed: 12 reference/MCP checks and five static-site checks | Catalog invariants, classification, scoping, search, errors, protocol behavior and website properties described below |
 | MCP integration | Real SDK client called all ten tools and read all 170 risk/control resources | Usable stdio tool/resource/prompt surface, including execution from a different working directory |
 | Legacy interoperability | 2025-11-25 initialize/list/call sequence passed | That tested protocol sequence works alongside the current SDK client |
 | Synthetic security example | Vulnerable cross-tenant read reproduced; corrected read denied; legitimate read succeeds | The in-memory authorization example enforces its tested boundary |
@@ -21,6 +21,14 @@ Observed on **2026-10-22**, Node.js 24.16.0, local macOS. The original extractio
 Tests exercise malformed pattern lists, oversized inputs, unknown IDs, arbitrary resource paths, untrusted observations, source citations, all record lookups and the absence of an automatic “verified” claim. Source-specific assertions include the surprising 9.1 applicability row; a separate project-authored review candidate keeps it visible for RAG and agentic systems.
 
 Run `npm run check` and `npm run demo` to reproduce the executable checks. GitHub CI additionally targets Node 22 and 24; inspect the actual check run for its current status rather than treating the configuration as a result.
+
+## Website checks
+
+The local build generated 219 HTML pages with Markdown alternatives and a server-rendered list of all 170 risks and controls. Five additional tests check metadata and inventory, internal links and anchors, safe Markdown rendering, the public-file allowlist, sitemap coverage, deployment URL validation and guarded build-output replacement.
+
+Browser inspection covered the homepage at 1200px and 390px wide, the audit guide at 390px, search results and an empty result, and navigation from the homepage to the checklist. The observed views had no horizontal document overflow. A separate visual reviewer checked the supplied desktop/mobile captures and confirmed the final breadcrumb correction. That review is not owner acceptance, an exhaustive accessibility audit or a live deployment check.
+
+The website provides crawlable text, canonical links, structured metadata, a sitemap and agent-readable alternatives. Search indexing, rankings, assistant citations and developer adoption remain unverified. Native Claude Code and Codex registration commands were checked against their documentation; those client integrations were not executed.
 
 ## Skill evaluation status: unvalidated
 
