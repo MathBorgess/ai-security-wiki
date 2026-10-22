@@ -6,7 +6,7 @@ An independent, community reference built by **Matheus Borges** around the [Data
 
 I started this project to study AI security in depth and make defensive knowledge easier to use at scale. The goal is to help people and agents ask better questions, trace answers to evidence and share useful improvements with the community.
 
-[Read the wiki](wiki/index.md) · [Português](README.pt-BR.md) · [Audit workflow](wiki/methodology.md) · [MCP setup](docs/mcp.md) · [Contribute](CONTRIBUTING.md)
+[Explore the website](https://mathborgess.github.io/ai-security-wiki/) · [Read the wiki](wiki/index.md) · [Português](README.pt-BR.md) · [Audit workflow](wiki/methodology.md) · [MCP setup](docs/mcp.md) · [Contribute](CONTRIBUTING.md)
 
 ## Start with your security question
 
