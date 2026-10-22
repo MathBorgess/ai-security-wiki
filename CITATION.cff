@@ -6,6 +6,7 @@ authors:
   - family-names: Borges
     given-names: Matheus
 repository-code: "https://github.com/MathBorgess/ai-security-wiki"
+url: "https://mathborgess.github.io/ai-security-wiki/"
 version: 0.1.0
 date-released: 2026-10-22
 license: "Apache-2.0 AND CC-BY-SA-4.0"

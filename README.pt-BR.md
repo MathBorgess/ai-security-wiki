@@ -4,7 +4,7 @@ Uma wiki e um MCP para ajudar agentes e pessoas a **entender um sistema de IA, i
 
 Criei este projeto para aprofundar meu aprendizado em segurança de IA e compartilhar uma referência prática de proteção em escala. A base é o Databricks AI Security Framework. O trabalho de organizar, testar e explicar esse conhecimento é uma contribuição independente de Matheus Borges, sem vínculo oficial com o Databricks.
 
-[Abrir a wiki](wiki/index.md) · [Instalar o MCP](docs/mcp.md) · [Conhecer os limites](docs/validation.md)
+[Explorar o site](https://mathborgess.github.io/ai-security-wiki/) · [Abrir a wiki](wiki/index.md) · [Instalar o MCP](docs/mcp.md) · [Conhecer os limites](docs/validation.md)
 
 ## Por onde começar
 
