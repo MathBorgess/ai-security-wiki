@@ -17,10 +17,14 @@
 - [Jason Haddix study](wiki/research/jason-haddix.md): attributed methods, tool limits, report readings and study sequence
 - [Repository inventory](wiki/research/jhaddix-inventory.md): 78 public repositories, with forks and selection decisions
 
+- [Jason Haddix posts and media](wiki/research/jason-haddix-media.md): inspected articles, viewing queue and study exercises
+- [spikee evaluation study](wiki/research/spikee-evaluation.md): models, guardrails, application effects, judges and controls
+
 ## Use
 
 - [Claude, Codex, ChatGPT and other agents](docs/clients.md): web reading versus local MCP configuration
 - [MCP integration](docs/mcp.md): tools, resources and prompts
+- [Ask cyber specialist](skills/ask-cyber-specialist/SKILL.md): explain mechanisms, challenge hypotheses and plan security studies
 - [Map attack surface skill](skills/map-attack-surface/SKILL.md): evidence mapping and investigation planning, no scanning
 - [Audit skill](skills/audit-ai-security/SKILL.md): ordered reusable workflow and references
 - [Agent/MCP boundaries](wiki/agent-security.md): concrete trust-boundary investigation

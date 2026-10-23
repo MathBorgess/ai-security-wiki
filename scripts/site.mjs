@@ -16,7 +16,7 @@ const pagePath = source => source === 'site/index.md' ? 'index.html' : source.re
 const mdPath = source => source === 'site/index.md' ? 'index.md' : source;
 
 export function publicSources() {
-  return ['site/index.md', 'README.md', 'README.pt-BR.md', 'CONTRIBUTING.md', 'SECURITY.md', ...walk('wiki'), ...walk('guides'), ...walk('docs'), 'examples/tenant-boundary.md', 'skills/audit-ai-security/SKILL.md', ...walk('skills/audit-ai-security/references'), 'skills/map-attack-surface/SKILL.md', ...walk('skills/map-attack-surface/references')].sort();
+  return ['site/index.md', 'README.md', 'README.pt-BR.md', 'CONTRIBUTING.md', 'SECURITY.md', ...walk('wiki'), ...walk('guides'), ...walk('docs'), 'examples/tenant-boundary.md', 'skills/audit-ai-security/SKILL.md', ...walk('skills/audit-ai-security/references'), 'skills/map-attack-surface/SKILL.md', ...walk('skills/map-attack-surface/references'), 'skills/ask-cyber-specialist/SKILL.md', ...walk('skills/ask-cyber-specialist/references')].sort();
 }
 
 export function siteUrl(value = DEFAULT_URL) {
