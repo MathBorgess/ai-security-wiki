@@ -9,3 +9,7 @@ Append dated entries; preserve superseded evidence in Git history.
 ## 2026-10-23 — Practitioner research and attack-surface skill
 
 Prepared a 78-repository triage of jhaddix, selected source readings, attribution-aware study guide and map-attack-surface skill. The skill uses public TBHM/HUNT practices with explicit AI adaptations. No active reconnaissance, new MCP capability or change to the DASF catalog. See the dedicated [validation note](../docs/jhaddix-study-validation.md).
+
+## 2026-10-23 — Independent mapping evaluation
+
+Evaluated map-attack-surface in fresh Codex CLI sessions against a no-package baseline and native discovery prompts. Version 0.1.1 narrows selection and makes sanitized/private evidence handling explicit. Final 4/4 practical cases and 4/4 discovery prompts passed the recorded checks; earlier failures and comparison limits remain in the [validation note](../docs/jhaddix-study-validation.md). No target testing or MCP capability change.

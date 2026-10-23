@@ -14,4 +14,4 @@ For an out-of-scope case, discovery criteria pass only if the output explicitly 
 
 ## Evaluation status
 
-**Unvalidated.** The package includes four synthetic practical cases and four discovery prompts. Structural checks and same-session author walkthroughs are recorded in the [study validation note](../../../docs/jhaddix-study-validation.md). An independent without-skill comparison and automatic host selection have not been run. Source-backed criteria do not establish universal expertise, security effectiveness or practitioner approval.
+**Validated** for the bounded synthetic Codex run documented in the [study validation note](../../../docs/jhaddix-study-validation.md). Final practical cases: 4/4 accepted with the package loaded, versus 1/4 baseline outputs accepted under the frozen rubric. Final automatic discovery: 4/4. Initial failures, two revisions, explicit invocation versus automatic selection, review evidence gaps and shared-model limits are preserved in that note. These results establish neither universal expertise nor security effectiveness, practitioner approval or cross-client compatibility.
