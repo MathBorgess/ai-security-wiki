@@ -36,3 +36,7 @@ Para instalar, siga os comandos do [README principal](README.md). O MCP roda loc
 ## Um cuidado concreto com a fonte
 
 A planilha tem células vazias, relações não recíprocas e marcações discutíveis. Por exemplo, a linha 9.1 de prompt injection está marcada como “No” para RAG. O projeto preserva esse dado e recomenda revisar o risco na arquitetura, sem fingir que a fonte disse outra coisa. [Veja o registro](wiki/source-issues.md).
+
+## Estudar métodos públicos de segurança
+
+O [estudo dos repositórios de Jason Haddix](wiki/research/jason-haddix.md) separa métodos, ferramentas, relatos e forks. A skill [map-attack-surface](skills/map-attack-surface/SKILL.md) transforma evidências em um mapa e perguntas de investigação. Ela complementa o DASF e não executa reconhecimento. Veja os [limites da validação](docs/jhaddix-study-validation.md).

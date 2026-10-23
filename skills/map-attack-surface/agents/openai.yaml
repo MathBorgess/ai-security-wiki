@@ -1,0 +1,3 @@
+interface:
+  display_name: "Map attack surface"
+  short_description: "Map scoped assets, trust boundaries and investigation priorities"

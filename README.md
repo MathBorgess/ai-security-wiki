@@ -74,3 +74,7 @@ flowchart LR
 The source contains [inconsistencies](wiki/source-issues.md). Blank applicability remains unspecified; reverse graph disagreements remain visible; source filtering does not replace architectural judgment. The project adds verification guidance without presenting it as Databricks-authored material.
 
 This is an educational and assessment aid, not a scanner, certification, compliance attestation or guarantee of safety. It does not execute attacks, apply fixes or install tools in the target system. No Databricks affiliation or endorsement is implied. Code is Apache-2.0; DASF-derived knowledge and documentation are CC BY-SA 4.0. See [LICENSE](LICENSE) and [NOTICE](NOTICE).
+
+## Study public security methods
+
+Explore [Jason Haddix's repositories, tools and report-reading path](wiki/research/jason-haddix.md), then use [map-attack-surface](skills/map-attack-surface/SKILL.md) to prepare a scoped evidence map. The skill complements DASF; it does not run reconnaissance. [Validation limits](docs/jhaddix-study-validation.md).
