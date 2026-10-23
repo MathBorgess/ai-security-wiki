@@ -30,6 +30,14 @@ Browser inspection covered the homepage at 1200px and 390px wide, the audit guid
 
 The website provides crawlable text, canonical links, structured metadata, a sitemap and agent-readable alternatives. Search indexing, rankings, assistant citations and developer adoption remain unverified. Native Claude Code and Codex registration commands were checked against their documentation; those client integrations were not executed.
 
+## Research-library addition — 2026-10-23
+
+On local macOS with Node.js 24.16.0, `npm run check` passed **20 tests**. The source graph remains 97 risks, 73 controls and 804 links; the catalog bytes are unchanged from the initial snapshot. The six complementary guides/templates bring the static build to **225 HTML pages**, each with a Markdown alternative, and **176 searchable homepage entries** (170 DASF records plus six research references).
+
+The real stdio SDK test reads all 19 allowlisted reference documents through both the resource and tool interfaces and compares their content, in addition to all 170 catalog resources. Discovery returns 190 resources and the same ten tools. Tests cover reference search with pinned source provenance, catalog-only kind filters, invalid reference names/URLs/paths, supplemental method links and publication of the source manifest and license notices.
+
+Browser inspection verified the `PentAGI` query (two matching reading entries), the research-only filter (six entries), navigation to the Cloudflare reading and that page at 1200px and 390px with no horizontal document overflow. These are local software and reading checks. No upstream skill/agent execution, real-target audit, independent security review or indexing/adoption measurement was performed for this addition.
+
 ## Skill evaluation status: unvalidated
 
 The package has four practical cases (normal, missing input, conflicting guidance, out of scope), five trigger prompts and two source-backed review lenses. Four cases were exercised as a same-session author walkthrough, using actual outputs from the server’s domain functions for the relevant steps. Both lenses accepted the four walkthrough outputs (4/4). This is a self-review of synthetic artifacts, not an independent domain benchmark.

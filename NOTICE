@@ -27,3 +27,10 @@ are source-reported claims, not independently verified certifications or endorse
 No affiliation with, sponsorship by or endorsement from Databricks, MCP maintainers
 or other referenced organizations is implied. This project does not represent a
 measured security outcome, a professional certification or legal advice.
+
+Complementary research added 2026-10-23: attributed original summaries and
+defensive adaptations of PentAGI (VXControl / PentAGI contributors), Cloudflare
+security-audit-skill, and the public Red Blue Field reference blueprint.
+Exact revisions, inspected paths and limits: sources/research.json.
+MIT copyright and permission notices: THIRD_PARTY_NOTICES.txt.
+No upstream code, prompts, schemas or validators are bundled or executed.

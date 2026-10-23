@@ -18,6 +18,8 @@ Source forward links from the risk table drive the actionable graph. The control
 
 ## 3. Turn each risk into a falsifiable investigation
 
+For a worked synthetic sequence, use the [evidence-driven audit playbook](../guides/evidence-driven-audit.md). The [research library](research/index.md) explains the complementary PentAGI and Cloudflare methods, and the [coverage ledger](templates/coverage-ledger.md) records examined, blocked and pending paths separately from finding verdicts.
+
 Call `investigate_risk`. State an asset, adversary capability, entry point, trust boundary, prohibited effect and expected enforcement. Ask for effective configuration and redacted runtime evidence before proposing active tests.
 
 Example hypothesis: “A retrieved document can cause a ticket tool to copy another tenant’s data into a new ticket.” Inspect the retrieval filters, authenticated user context, tool arguments and downstream authorization. A prompt saying “never do this” does not prove the downstream boundary is enforced.

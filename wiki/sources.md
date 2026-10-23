@@ -21,6 +21,18 @@ Transformations normalize whitespace and XLSX control-character escapes, produce
 
 Project-authored interpretation lives in the methodology, skill and control verification criteria. Every proposed test is explicitly unexecuted until the caller supplies real results. Source-reported descriptions and mappings are not endorsed as universally accurate.
 
+## Complementary research
+
+Inspected **2026-10-23**. These pinned references extend investigation methods; they do not change the DASF source snapshot, counts, applicability or official mappings. [Reading library](research/index.md) · [Machine-readable manifest](../sources/research.json).
+
+| ID | Source and pinned revision | Inspected scope and limits |
+|---|---|---|
+| S7 | [PentAGI, 843dfeb](https://github.com/vxcontrol/pentagi/tree/843dfeb4bfc809c09d1bc5022e567c602d8fc9dd) | README, flow design, tool registry and MIT license. Architecture reference; not a tested integration or effectiveness claim. [Study](research/pentagi.md). |
+| S8 | [Cloudflare security-audit-skill, c1c8a8c](https://github.com/cloudflare/security-audit-skill/tree/c1c8a8c1471069fb0e188eeaff69b8e8db6564a8) | README, reconnaissance, AI/LLM boundaries, validation/reporting and MIT license. Selected method sections; no skill execution or upstream schema compatibility claimed. [Study](research/cloudflare-security-audit.md). |
+| S9 | [Red Blue Field blueprint, 35baa4c](https://github.com/MathBorgess/red-blue-field/blob/35baa4c973c06a6d3d7424871407fa2b3204e4cf/docs/reference-blueprints.md) | Public design rationale connecting S7 and S8; implementation and experiment results not validated here. No lab code or private evidence imported. [Study](research/red-blue-field.md). |
+
+These are the revisions used by the laboratory's public blueprint, not a latest-release claim. Original summaries and adaptations link to precise source files. [Third-party notices](../THIRD_PARTY_NOTICES.txt) retain MIT attribution; DASF-derived content retains its existing ShareAlike terms. The new playbook and ledger are project-authored teaching material, not copies of the upstream prompts or validators.
+
 ## Coverage boundaries
 
 - The linked whitepaper and all external standards are cited; their complete texts are not copied into this repository.

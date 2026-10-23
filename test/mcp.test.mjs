@@ -4,6 +4,7 @@ import { Client } from '@modelcontextprotocol/client';
 import { StdioClientTransport } from '@modelcontextprotocol/client/stdio';
 import { fileURLToPath } from 'node:url';
 import { catalog } from '../src/knowledge.mjs';
+import { references } from '../src/references.mjs';
 
 test('real stdio MCP session: discovery, all tools, resources, prompts and validation', { timeout: 30000 }, async () => {
   const client = new Client({ name: 'ai-security-wiki-test', version: '0.1.0' });
@@ -27,7 +28,23 @@ test('real stdio MCP session: discovery, all tools, resources, prompts and valid
       assert(result.structuredContent, `${name} has structured output`);
     }
     const resources = await client.listResources();
-    assert.equal(resources.resources.length, 184);
+    assert.equal(resources.resources.length, 190);
+    for (const name of Object.keys(references)) {
+      const resource = await client.readResource({ uri: `dasf://wiki/${name}` });
+      const tool = await client.callTool({ name: 'get_reference', arguments: { name } });
+      assert.notEqual(tool.isError, true);
+      assert.equal(tool.structuredContent.text, resource.contents[0].text);
+      assert(tool.structuredContent.text.startsWith('#') || tool.structuredContent.text.startsWith('---'));
+    }
+    const research = await client.callTool({ name: 'search_knowledge', arguments: { query: 'PentAGI', kind: 'reference' } });
+    const reading = research.structuredContent.results.find(r => r.name === 'pentagi');
+    assert(reading);
+    const fetched = await client.callTool({ name: 'get_reference', arguments: { name: reading.name } });
+    assert.match(fetched.structuredContent.text, /843dfeb4bfc809c09d1bc5022e567c602d8fc9dd/);
+    for (const name of ['../../.env', 'https://example.invalid/README.md', '__proto__']) {
+      const denied = await client.callTool({ name: 'get_reference', arguments: { name } });
+      assert.equal(denied.isError, true);
+    }
     const templates = await client.listResourceTemplates(); assert.equal(templates.resourceTemplates.length, 2);
     // Exercise every generated record through the wire, not only direct module calls.
     for (const r of catalog.risks) {

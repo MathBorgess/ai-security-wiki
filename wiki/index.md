@@ -33,6 +33,8 @@ Snapshot 2026-10-22, DASF 3.0: **97 risks, 73 controls, 13 components, 7 deploym
 ## Investigation and learning
 
 - [Audit method](methodology.md)
+- [Security research: PentAGI, Cloudflare and Red Blue Field](research/index.md)
+- [Evidence-driven audit playbook](../guides/evidence-driven-audit.md)
 - [Agent and MCP trust boundaries](agent-security.md)
 - [Glossary](glossary.md)
 - [Finding template](templates/finding.md)
