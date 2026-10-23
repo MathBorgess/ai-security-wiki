@@ -44,3 +44,5 @@ A planilha tem células vazias, relações não recíprocas e marcações discut
 ## Estudar métodos públicos de segurança
 
 O [estudo dos repositórios de Jason Haddix](wiki/research/jason-haddix.md) separa métodos, ferramentas, relatos e forks. A skill [map-attack-surface](skills/map-attack-surface/SKILL.md) transforma evidências em um mapa e perguntas de investigação. Ela complementa o DASF e não executa reconhecimento. Veja os [limites da validação](docs/jhaddix-study-validation.md).
+
+A [ask-cyber-specialist](skills/ask-cyber-specialist/SKILL.md) funciona como um especialista de bolso: explica mecanismos, questiona hipóteses e ajuda a escolher estudos com uma entrevista curta. Veja os [posts e mídias do Jason](wiki/research/jason-haddix-media.md), o [guia de avaliação com spikee](wiki/research/spikee-evaluation.md) e os [resultados observados](docs/cyber-specialist-validation.md). O perfil se inspira em métodos públicos e não se apresenta como Jason.

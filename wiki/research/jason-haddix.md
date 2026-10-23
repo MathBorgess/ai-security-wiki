@@ -76,3 +76,5 @@ After mapping, use [audit-ai-security](../../skills/audit-ai-security/SKILL.md):
 Use the [full inventory](jhaddix-inventory.md) to inspect upstream projects before selecting tools. Older forks of Amass, SecLists, Nuclei templates and other projects are not maintained-version recommendations. Prompt-leak collections have unresolved provenance and reuse questions; synthetic examples are sufficient for the current skill. Post-exploitation and people-data collection are separate activities. CloudRecon's advertised branch was unavailable and its branches endpoint returned no branches, so its implementation remains unknown.
 
 This delivery adds study material and a portable skill for review. It does not install a scanner, add an MCP tool, change the audit's authority or integrate an executable red-team workflow. See [source provenance](../../skills/map-attack-surface/references/sources.md) and [validation limits](../../docs/jhaddix-study-validation.md).
+
+Continue with the [posts and media study](jason-haddix-media.md), [pocket specialist](../../skills/ask-cyber-specialist/SKILL.md) and [spikee evaluation guide](spikee-evaluation.md).

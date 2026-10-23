@@ -48,3 +48,5 @@ Follow [the update procedure](../docs/updating.md). A source change requires a r
 ## Complementary practitioner study
 
 The [Jason Haddix study](research/jason-haddix.md) has a separate [source register](../skills/map-attack-surface/references/sources.md) and [inventory](research/jhaddix-inventory.md), inspected 2026-10-23. JH source IDs identify public practitioner/tool references, not DASF records. The resulting attack-surface mapping workflow is a project adaptation; upstream forks and case authors retain attribution.
+
+The [posts/media study](research/jason-haddix-media.md) and [spikee evaluation study](research/spikee-evaluation.md) add original synthesis with their own source ledgers. [ask-cyber-specialist attribution](../skills/ask-cyber-specialist/references/sources.md) records PITAX licensing, practitioner/coauthor credit, inspected scope and unviewed media. These references do not alter the DASF source extraction.

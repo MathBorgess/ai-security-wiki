@@ -14,3 +14,7 @@ Prepared a 78-repository triage of jhaddix, selected source readings, attributio
 ## 2026-10-23 — Independent mapping evaluation
 
 Evaluated map-attack-surface in fresh Codex CLI sessions against a no-package baseline and native discovery prompts. Version 0.1.1 narrows selection and makes sanitized/private evidence handling explicit. Final 4/4 practical cases and 4/4 discovery prompts passed the recorded checks; earlier failures and comparison limits remain in the [validation note](../docs/jhaddix-study-validation.md). No target testing or MCP capability change.
+
+## 2026-10-23 — Pocket specialist and AI evaluation studies
+
+Added ask-cyber-specialist, an original domain profile informed by public methods, with optional study interviews, falsifiable hypotheses and paired defenses/retests. Added a Jason Haddix post/media reading path and a pinned upstream spikee evaluation guide. Native Codex discovery and practical outputs were evaluated separately from installation and real-system efficacy; see [validation](../docs/cyber-specialist-validation.md). No active scanning, new MCP capability or DASF record change.

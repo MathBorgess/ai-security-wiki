@@ -82,3 +82,5 @@ This is an educational and assessment aid, not a scanner, certification, complia
 ## Study public security methods
 
 Explore [Jason Haddix's repositories, tools and report-reading path](wiki/research/jason-haddix.md), then use [map-attack-surface](skills/map-attack-surface/SKILL.md) to prepare a scoped evidence map. The skill complements DASF; it does not run reconnaissance. [Validation limits](docs/jhaddix-study-validation.md).
+
+Use [ask-cyber-specialist](skills/ask-cyber-specialist/SKILL.md) to explain mechanisms, challenge hypotheses and plan studies with a pocket cybersecurity mentor. Explore [Jason Haddix’s posts and media](wiki/research/jason-haddix-media.md), [spikee evaluation design](wiki/research/spikee-evaluation.md) and the [observed skill evaluation](docs/cyber-specialist-validation.md).
