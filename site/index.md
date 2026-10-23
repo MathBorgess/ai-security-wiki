@@ -12,6 +12,8 @@ Understand what your AI system can read, remember and change. Explore the Databr
 - **Learn from a correction.** [Reproduce and fix a synthetic cross-tenant authorization flaw](../examples/tenant-boundary.md).
 - **Study security investigations.** [Explore PentAGI, Cloudflare's audit skill and Red Blue Field](../wiki/research/index.md), then [follow a hypothesis through evidence and retest](../guides/evidence-driven-audit.md).
 
+- **Study reconnaissance.** [Explore Jason Haddix's methods, tools and reports, with an attack-surface mapping skill](../wiki/research/jason-haddix.md).
+
 ## A reference you can inspect
 
 This independent project by Matheus Borges combines a linked wiki, a versioned catalog and a local MCP server. The DASF 3.0 snapshot covers **97 risks and 73 controls** across ML, GenAI and agentic systems. Every record points to its source. The project preserves disagreements in the source and labels its own interpretation.

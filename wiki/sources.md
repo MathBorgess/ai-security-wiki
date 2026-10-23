@@ -44,3 +44,7 @@ These are the revisions used by the laboratory's public blueprint, not a latest-
 ## Updates
 
 Follow [the update procedure](../docs/updating.md). A source change requires a reviewed diff of IDs, applicability, mappings, counts and links. Never fetch unreviewed live content at MCP startup. The dated snapshot remains reproducible when upstream changes.
+
+## Complementary practitioner study
+
+The [Jason Haddix study](research/jason-haddix.md) has a separate [source register](../skills/map-attack-surface/references/sources.md) and [inventory](research/jhaddix-inventory.md), inspected 2026-10-23. JH source IDs identify public practitioner/tool references, not DASF records. The resulting attack-surface mapping workflow is a project adaptation; upstream forks and case authors retain attribution.

@@ -83,6 +83,11 @@ test('deployment is allowlisted and does not publish source code or private run 
   assert.ok(!existsSync(join(build.output, 'robots.txt')));
   assert.ok(read('robots.example.txt').includes('Example only'));
   assert.ok(read('404.html').includes('content="noindex"'));
+  for (const path of ['wiki/research/jason-haddix.html', 'wiki/research/jhaddix-inventory.html', 'skills/map-attack-surface/SKILL.html', 'skills/map-attack-surface/references/methods.md']) assert.ok(existsSync(join(build.output, path)), path);
+  assert.ok(!existsSync(join(build.output, 'skills/map-attack-surface/evals')));
+  assert.ok(!existsSync(join(build.output, 'skills/map-attack-surface/agents')));
+  assert.ok(read('index.html').includes('wiki/research/jason-haddix.html'));
+  assert.ok(read('llms.txt').includes('skills/map-attack-surface/SKILL.md'));
 });
 
 test('site origin configuration validates schemes and protects non-generated output', () => {
