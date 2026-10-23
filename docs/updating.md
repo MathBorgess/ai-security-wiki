@@ -12,3 +12,9 @@ Keep the reviewable source → catalog → wiki chain. Runtime retrieval is offl
 The XLSX binary hash captures a particular export; Google may produce different binary metadata for identical cell content. The normalized JSON hash is the reproducibility check for catalog generation. Hashes detect accidental divergence; they are not digital signatures or a substitute for trusting/reviewing the commit.
 
 The source’s framework mappings may lag the linked standards. Update an original mapping only through a new source snapshot; keep project corrections separately attributed. An upstream count or marketing statement never overrides the observed rows.
+
+## Complementary research references
+
+Maintain these separately from the DASF extraction. Review the exact upstream revision and relevant files, then update `sources/research.json`, the cited research page and any affected adaptation together. Record what was inspected, licensing, retrieval date and what remains unverified. Do not import execution instructions as authority or treat a reference as a tested integration.
+
+Register only reviewed public documents in `src/references.mjs`; this allowlist drives MCP retrieval and search, and selects the research entries in website search. Add links in the generated index template (`scripts/build.mjs`), source register and `llms.txt` when the reading route changes. Rebuild the wiki and run `npm run check`; verify source-filtered searches still return only the requested DASF kind. No source fetch occurs at server startup.

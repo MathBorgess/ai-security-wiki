@@ -10,6 +10,7 @@ Understand what your AI system can read, remember and change. Explore the Databr
 - **Connect tools safely.** [Review MCP clients, servers, credentials and authorization](../guides/mcp-security.md).
 - **Investigate prompt injection.** [Trace untrusted content to data access and actions](../guides/prompt-injection.md).
 - **Learn from a correction.** [Reproduce and fix a synthetic cross-tenant authorization flaw](../examples/tenant-boundary.md).
+- **Study security investigations.** [Explore PentAGI, Cloudflare's audit skill and Red Blue Field](../wiki/research/index.md), then [follow a hypothesis through evidence and retest](../guides/evidence-driven-audit.md).
 
 - **Study reconnaissance.** [Explore Jason Haddix's methods, tools and reports, with an attack-surface mapping skill](../wiki/research/jason-haddix.md).
 
@@ -39,4 +40,4 @@ The website is a readable reference. The local MCP provides tools. A catalog mat
 
 ## Explore the reference
 
-Choose a risk or control below, or navigate by [system component and deployment pattern](../wiki/index.md). Preserve unknowns and combine every pattern present in your architecture.
+Choose a risk, control or research guide below, or navigate by [system component and deployment pattern](../wiki/index.md). The six research guides are complementary project references; the DASF snapshot still contains 97 risks and 73 controls. Preserve unknowns and combine every pattern present in your architecture.

@@ -31,6 +31,18 @@
 - [Synthetic correction](examples/tenant-boundary.md): executed before/after example
 - [Validation](docs/validation.md): verified behaviors and unrun evaluations
 
+## Complementary security research
+
+- [Research library](wiki/research/index.md): source-pinned reading routes, separate from the DASF taxonomy
+- [PentAGI](wiki/research/pentagi.md): investigation orchestration, tools, memory and evidence boundaries
+- [Cloudflare security-audit-skill](wiki/research/cloudflare-security-audit.md): coverage, source tracing, verdicts and independent verification
+- [Red Blue Field](wiki/research/red-blue-field.md): public laboratory design connecting the reference methods
+- [Evidence-driven audit playbook](guides/evidence-driven-audit.md): synthetic hypothesis, refutation, correction and retest
+- [Coverage ledger](wiki/templates/coverage-ledger.md): incomplete work, blockers and evidence, distinct from findings
+- [Research source manifest](sources/research.json): inspected revisions, paths, licenses and limitations
+
+MCP: search_knowledge kind=reference, then get_reference with the returned name. These are original summaries and adaptations, not executed audits, installed tools or official DASF mappings.
+
 ## Language
 
 - [Português](README.pt-BR.md): purpose and usage in Brazilian Portuguese

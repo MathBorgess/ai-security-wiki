@@ -6,19 +6,13 @@ import { pathToFileURL } from 'node:url';
 import { resolve } from 'node:path';
 import { z } from 'zod/v4';
 import { ROOT, catalog, schemas, invoke, overview, getRisk, getControl } from './knowledge.mjs';
+import { references, readReference, referenceRecords, referenceSummary } from './references.mjs';
+export { references } from './references.mjs';
 
-export const references = {
-  index: 'wiki/index.md', methodology: 'wiki/methodology.md', 'agent-security': 'wiki/agent-security.md',
-  glossary: 'wiki/glossary.md', 'finding-template': 'wiki/templates/finding.md', 'source-issues': 'wiki/source-issues.md',
-  'source-register': 'wiki/sources.md', toolkit: 'wiki/toolkit.md',
-  skill: 'skills/audit-ai-security/SKILL.md', personality: 'skills/audit-ai-security/references/personality.md',
-  methods: 'skills/audit-ai-security/references/methods.md', 'review-rubric': 'skills/audit-ai-security/references/review-rubric.md',
-  'skill-sources': 'skills/audit-ai-security/references/sources.md',
-};
 const descriptions = {
   classify_system: 'Start an AI security audit here. Identify ML, GenAI and agentic deployment patterns from explicit system features. Unknown inputs produce questions; combine all applicable patterns.',
   scope_risks: 'After classification, filter DASF risks using the union of deployment-pattern Yes cells, then deduplicate linked controls. Returns source citations and unspecified applicability. This is scoping, not a vulnerability finding.',
-  search_knowledge: 'Find DASF risks and controls by literal words, IDs or source framework mapping. Paginated source-backed results; use get_risk/get_control for details. Translate natural-language search terms to source English when needed.',
+  search_knowledge: 'Find DASF risks/controls and complementary references including PentAGI, Cloudflare security-audit-skill and Red Blue Field. Literal AND search; kind risk/control/reference/all, paginated results. Read reference results with get_reference(name); use get_risk/get_control for catalog details. References carry separate provenance.',
   get_risk: 'Read one complete DASF risk, impacts, deployment applicability, mappings and official source row.',
   get_control: 'Read one DASF control, platform documentation, source mappings and project-authored verification criteria.',
   investigate_risk: 'Learn how to investigate a DASF risk: trust boundary, failure hypothesis, evidence requests, bounded tests and per-control acceptance criteria. Does not scan or execute tests.',
@@ -28,10 +22,6 @@ const descriptions = {
 };
 const annotations = { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false };
 const asResult = value => ({ content: [{ type: 'text', text: JSON.stringify(value) }], structuredContent: value });
-const readReference = key => {
-  if (!Object.hasOwn(references, key)) throw new Error('Unknown reference');
-  return readFileSync(resolve(ROOT, references[key]), 'utf8');
-};
 const messages = text => ({ messages: [{ role: 'user', content: { type: 'text', text } }] });
 
 export function createServer() {
@@ -45,9 +35,12 @@ export function createServer() {
     });
   }
   server.registerTool('get_reference', {
-    description: 'Read the wiki method, glossary, source caveats or the portable audit skill and its required personality/methods/review lenses. Available even in MCP hosts without resource support.',
+    description: 'Read an allowlisted wiki/skill reference, PentAGI and Cloudflare research, evidence playbook or coverage template. Use a name returned by search_knowledge(kind=reference). Available even in MCP hosts without resource support. Does not run upstream tools or skills.',
     inputSchema: z.object({ name: z.enum(Object.keys(references)) }).strict(), annotations,
-  }, async ({ name }) => asResult({ name, provenance: 'Project-authored synthesis with cited source boundaries', text: readReference(name) }));
+  }, async ({ name }) => {
+    const record = referenceRecords.find(r => r.name === name);
+    return asResult({ ...referenceSummary(record), source_provenance: record.provenance, provenance: 'Project-authored synthesis with cited source boundaries', text: readReference(name) });
+  });
   server.registerResource('overview', 'dasf://overview', { description: 'Snapshot, counts, source provenance and suggested workflow', mimeType: 'application/json' }, async uri => ({ contents: [{ uri: uri.href, mimeType: 'application/json', text: JSON.stringify(overview()) }] }));
   for (const key of Object.keys(references)) server.registerResource(key, `dasf://wiki/${key}`, { description: `AI Security Wiki: ${key}`, mimeType: 'text/markdown' }, async uri => ({ contents: [{ uri: uri.href, mimeType: 'text/markdown', text: readReference(key) }] }));
   server.registerResource('risk', new ResourceTemplate('dasf://risk/{id}', {

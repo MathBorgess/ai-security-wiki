@@ -36,7 +36,7 @@ Use the host’s documented configuration location and restart/reload procedure.
 | `classify_system` | Explicit yes/no/unknown for predictive_ml, retrieval, fine_tuning, pretraining, foundation_model, external_provider and agent_actions |
 | `scope_risks` | Union source Yes rows for one or more deployment patterns; return controls, unspecified rows and separate architecture review candidates |
 | `build_audit_plan` | Required intake, unverified risk register and per-control evidence/testing backlog |
-| `search_knowledge` | Case/accent-insensitive literal AND search; kind, offset and limit (max 25); includes next_offset |
+| `search_knowledge` | Case/accent-insensitive literal AND search; kind risk/control/reference/all, offset and limit (max 25); includes next_offset |
 | `get_risk` | Complete risk, source applicability, impacts and mappings |
 | `get_control` | Complete control, docs, graph discrepancies and verification guidance |
 | `investigate_risk` | Falsifiable investigation steps and mapped control-specific checks |
@@ -54,12 +54,16 @@ Results carry framework version, snapshot date and source provenance. Tool annot
 
 - `dasf://overview`: inventory, provenance, workflow and source discrepancies.
 - `dasf://risk/{id}` and `dasf://control/{id}`: all 170 full Markdown records with source citations.
-- `dasf://wiki/{name}`: 13 allowlisted references, including methodology, source issues and all four skill references.
+- `dasf://wiki/{name}`: 19 allowlisted references, including methodology, source issues, skill references and six complementary research guides/templates.
 - Prompt `audit-ai-security`: loads the method and starts classification; an optional system_description is explicitly untrusted data.
 - Prompt `explain-security-finding`: asks for a risk_id and optional `en`/`pt-BR` language.
 
 The portable directory `skills/audit-ai-security` can be registered by a host according to that host’s skill conventions. It is not installed globally by this project. Automatic model selection is host-dependent. MCP consumers can load the same workflow through `get_reference` without installing a native skill.
 
 ## What the agent still does
+
+To discover the research, call `search_knowledge` with `{"query":"Cloudflare","kind":"reference"}`, then `get_reference` with a returned `name`, such as `cloudflare-audit`. Reference results include project/source provenance and pinned revisions where applicable. Default `kind: "all"` searches both the DASF catalog and reference text; `risk` and `control` remain catalog-only. Reference matches do not change scoping counts or official applicability. The `dasf://wiki/` namespace includes project adaptations and does not imply DASF authorship.
+
+The additional names are `security-research`, `pentagi`, `cloudflare-audit`, `red-blue-field`, `evidence-playbook` and `coverage-template`. `build_audit_plan` and `investigate_risk` link to the supplemental method. The server still has ten read-only tools and no upstream fetch, installation, target scanning or audit execution.
 
 The MCP provides grounded reference material and proposed checks. The agent must gather actual architecture and evidence with its own authorized tools, assess applicability, tailor changes and explain the mechanism in the user’s language. A string containing an observation is not independent verification. The server never claims that a proposed check ran.
