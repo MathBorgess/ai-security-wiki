@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "inspected_on": "2026-10-23",
+  "selection_basis": "Pinned revisions used by the public Red Blue Field reference blueprint; not a latest-version claim.",
+  "content_policy": "Original summaries and defensive adaptations; no upstream code, prompts, schemas or validators bundled. Runtime retrieval is offline.",
+  "sources": [
+    {
+      "id": "S7",
+      "title": "PentAGI",
+      "publisher": "VXControl / PentAGI contributors",
+      "repository": "https://github.com/vxcontrol/pentagi",
+      "revision": "843dfeb4bfc809c09d1bc5022e567c602d8fc9dd",
+      "inspected_paths": [
+        "README.md",
+        "backend/docs/flow_execution.md",
+        "backend/pkg/tools/registry.go",
+        "LICENSE"
+      ],
+      "license": "MIT",
+      "license_url": "https://github.com/vxcontrol/pentagi/blob/843dfeb4bfc809c09d1bc5022e567c602d8fc9dd/LICENSE",
+      "knowledge_page": "wiki/research/pentagi.md",
+      "limits": "Selected architecture and capability documentation inspected; not an audit, installation, integration or effectiveness evaluation. Optional dependencies/services have separate terms."
+    },
+    {
+      "id": "S8",
+      "title": "Cloudflare security-audit-skill",
+      "publisher": "Cloudflare, Inc.",
+      "repository": "https://github.com/cloudflare/security-audit-skill",
+      "revision": "c1c8a8c1471069fb0e188eeaff69b8e8db6564a8",
+      "inspected_paths": [
+        "README.md",
+        "skills/security-audit/RECONNAISSANCE.md",
+        "skills/security-audit/AI-AND-LLM.md",
+        "skills/security-audit/VALIDATION-AND-REPORTING.md",
+        "LICENSE"
+      ],
+      "license": "MIT",
+      "license_url": "https://github.com/cloudflare/security-audit-skill/blob/c1c8a8c1471069fb0e188eeaff69b8e8db6564a8/LICENSE",
+      "knowledge_page": "wiki/research/cloudflare-security-audit.md",
+      "limits": "Selected method, AI boundary and verification sections; not an execution of the skill, a compatible schema implementation or a measured detection result."
+    },
+    {
+      "id": "S9",
+      "title": "Red Blue Field reference blueprint",
+      "publisher": "Matheus Borges",
+      "repository": "https://github.com/MathBorgess/red-blue-field",
+      "revision": "35baa4c973c06a6d3d7424871407fa2b3204e4cf",
+      "inspected_paths": [
+        "docs/reference-blueprints.md"
+      ],
+      "license": null,
+      "license_url": null,
+      "knowledge_page": "wiki/research/red-blue-field.md",
+      "limits": "Public blueprint used only as a design reference. No license declared in repository metadata at inspection; no lab code, schemas or private records copied. Implementation and experiments not validated here."
+    }
+  ]
+}

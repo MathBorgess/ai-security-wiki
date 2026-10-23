@@ -13,6 +13,8 @@ I started this project to study AI security in depth and make defensive knowledg
 - [AI agent security checklist](guides/agent-security-checklist.md): classify the architecture and inspect trust boundaries.
 - [MCP security checklist](guides/mcp-security.md): review clients, servers, credentials and tool authorization.
 - [Prompt injection in RAG and agents](guides/prompt-injection.md): trace untrusted content to a concrete effect.
+- [PentAGI, Cloudflare and Red Blue Field](wiki/research/index.md): study investigation architecture, coverage and independent verification.
+- [Evidence-driven audit playbook](guides/evidence-driven-audit.md): move from a synthetic hypothesis to proposed correction and retest.
 - [Use with Claude, Codex, ChatGPT or another agent](docs/clients.md): choose web reference access or local MCP integration.
 
 The [static documentation site](docs/discoverability.md) is generated from this wiki, with a searchable reference, Markdown alternates and a sitemap. To cite or adapt the work, use [CITATION.cff](CITATION.cff) and preserve the original [DASF attribution](NOTICE).
@@ -25,6 +27,8 @@ The **2026-10-22 snapshot of DASF 3.0** indexes **97 risks, 73 controls, 804 ris
 - **MCP:** ten read-only tools, reference resources and two prompts for classification, scoping, investigation, remediation proposals and explanations.
 - **Skill:** [audit-ai-security](skills/audit-ai-security/SKILL.md), with an evidence-oriented working profile, cited methods and two review lenses.
 - **Verification:** deterministic source checks and a real MCP client test. [Validation report](docs/validation.md) distinguishes software tests from domain and host behavior.
+
+The complementary research library adds six original guides/templates, with pinned revisions and a [separate source manifest](sources/research.json). Search them through `search_knowledge` with `kind: "reference"`, then use `get_reference` with a returned name. The same guides appear in website search, HTML and Markdown. These are reference adaptations, not new official DASF entries or executed upstream integrations.
 
 ## Try it
 

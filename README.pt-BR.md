@@ -11,6 +11,8 @@ Criei este projeto para aprofundar meu aprendizado em segurança de IA e compart
 - [Checklist de segurança de agentes](guides/agent-security-checklist.md): arquitetura, permissões e evidências.
 - [Segurança de MCP](guides/mcp-security.md): clientes, servidores, ferramentas e credenciais.
 - [Investigar prompt injection](guides/prompt-injection.md): do conteúdo não confiável ao efeito no sistema.
+- [PentAGI, Cloudflare e Red Blue Field](wiki/research/index.md): fontes para investigar por hipóteses, registrar cobertura e verificar achados.
+- [Roteiro de investigação com evidências](guides/evidence-driven-audit.md): exemplo sintético, correção proposta e critérios de reteste.
 - [Usar com Claude, Codex, ChatGPT e outros agentes](docs/clients.md): leitura pela web e instalação local são caminhos diferentes.
 
 Os guias estão em inglês. Você pode pedir ao agente uma explicação em português, preservando os IDs, fontes e limites da evidência.
@@ -32,6 +34,8 @@ Isso não significa que essa falha existe no seu sistema. É um **exemplo sinté
 Snapshot de 22/10/2026: 97 riscos, 73 controles, 804 relações e sete modelos de implantação. O conteúdo reutilizável está em inglês; o prompt e a ferramenta de explicação orientam o agente a responder em português quando solicitado. Os trechos originais da fonte conservam seu idioma.
 
 Para instalar, siga os comandos do [README principal](README.md). O MCP roda localmente, sem chave de modelo e sem conta Databricks. Ele fornece conhecimento e planos; a inspeção do seu sistema depende das ferramentas e permissões do agente que o utiliza.
+
+A biblioteca complementar foi consultada em 23/10/2026, com revisões fixadas e origem explícita. Busque `PentAGI` ou `Cloudflare` com `search_knowledge`, usando `kind: "reference"`, e leia o resultado com `get_reference`. Os seis novos guias aparecem também na busca do site. O catálogo DASF permanece separado; nenhuma instalação, execução de pentest ou auditoria de alvo foi realizada para essa adição.
 
 ## Um cuidado concreto com a fonte
 

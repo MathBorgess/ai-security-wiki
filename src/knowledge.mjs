@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
 import { z } from 'zod/v4';
 import { controlCheck } from './checks.mjs';
+import { referenceRecords, referenceSummary } from './references.mjs';
 
 export const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const manifest = JSON.parse(readFileSync(resolve(ROOT, 'sources/manifest.json'), 'utf8'));
@@ -28,7 +29,7 @@ const features = [
 export const schemas = {
   classify_system: z.object(Object.fromEntries(features.map(([key, , question]) => [key, tri.describe(question)]))).strict(),
   scope_risks: z.object({ deployment_patterns: patternsSchema }).strict(),
-  search_knowledge: z.object({ query: z.string().trim().min(1).max(300), kind: z.enum(['risk', 'control', 'all']).default('all'), offset: z.number().int().min(0).max(1000).default(0), limit: z.number().int().min(1).max(25).default(10) }).strict(),
+  search_knowledge: z.object({ query: z.string().trim().min(1).max(300), kind: z.enum(['risk', 'control', 'reference', 'all']).default('all'), offset: z.number().int().min(0).max(1000).default(0), limit: z.number().int().min(1).max(25).default(10) }).strict(),
   get_risk: z.object({ risk_id: idSchema }).strict(),
   get_control: z.object({ control_id: idSchema }).strict(),
   investigate_risk: z.object({ risk_id: idSchema }).strict(),
@@ -101,10 +102,16 @@ export const handlers = {
   search_knowledge({ query, kind, offset, limit }) {
     const norm = s => s.normalize('NFKD').replace(/\p{Diacritic}/gu, '').toLowerCase();
     const terms = norm(query).split(/\s+/);
-    const records = [...(kind !== 'control' ? catalog.risks.map(r => ({ kind: 'risk', item: r, summary: riskSummary(r) })) : []), ...(kind !== 'risk' ? catalog.controls.map(c => ({ kind: 'control', item: c, summary: controlSummary(c) })) : [])];
+    const records = [
+      ...(['all', 'risk'].includes(kind) ? catalog.risks.map(r => ({ kind: 'risk', item: r, summary: riskSummary(r) })) : []),
+      ...(['all', 'control'].includes(kind) ? catalog.controls.map(c => ({ kind: 'control', item: c, summary: controlSummary(c) })) : []),
+      ...(['all', 'reference'].includes(kind) ? referenceRecords.map(r => ({ kind: 'reference', item: { name: r.name, title: r.title, text: r.text, aliases: r.aliases }, summary: referenceSummary(r) })) : []),
+    ];
     const matches = records.filter(r => terms.every(term => norm(JSON.stringify(r.item)).includes(term)));
     return { provenance: provenance(), query, total: matches.length, offset, next_offset: offset + limit < matches.length ? offset + limit : null,
-      results: matches.slice(offset, offset + limit).map(r => ({ kind: r.kind, ...r.summary })), search_semantics: 'Case/accent-insensitive literal AND terms over source fields; no embedding or model inference' };
+      results: matches.slice(offset, offset + limit).map(r => ({ kind: r.kind, ...r.summary })),
+      provenance_scope: 'Top-level provenance describes the DASF catalog only. Reference results carry their own project/source provenance.',
+      search_semantics: 'Case/accent-insensitive literal AND terms over catalog fields or allowlisted reference titles, text and aliases; no embedding or model inference' };
   },
   get_risk({ risk_id }) { return { provenance: provenance(), risk: getRisk(risk_id), boundaries }; },
   get_control({ control_id }) { const c = getControl(control_id); return { provenance: provenance(), control: c, verification_guidance: controlCheck(c), source_discrepancies: catalog.source_issues.filter(i => i.control_id === c.id), boundaries }; },
@@ -119,12 +126,13 @@ export const handlers = {
         { step: 5, action: 'Report confirmed, refuted or unverified findings with references; prioritize impact and reachability; propose changes and retest.', evidence: 'Owner, rollback, acceptance criteria and residual risk' },
       ],
       controls: r.control_ids.map(id => { const c = getControl(id); return { ...controlSummary(c), ...controlCheck(c), implementation_references: c.documentation }; }),
-      report_template: 'dasf://wiki/finding-template', boundaries };
+      report_template: 'dasf://wiki/finding-template', supplemental_method: { name: 'evidence-playbook', uri: 'dasf://wiki/evidence-playbook', provenance: 'Project adaptation; not an official DASF mapping' }, boundaries };
   },
   build_audit_plan({ deployment_patterns }) {
     const selected = scope(deployment_patterns);
     return { provenance: provenance(), status: 'provisional-until-intake-and-evidence-review', deployment_patterns,
       required_intake: auditInputs, stages: ['Confirm all deployment patterns and data flows', 'Review source-applicable and unspecified risks against architecture', 'Collect evidence at each trust boundary', 'Perform authorized bounded tests', 'Propose corrections with owners and rollback', 'Retest and record residual risk; explain findings when requested'],
+      method_references: ['methodology', 'evidence-playbook', 'coverage-template'].map(name => ({ name, uri: `dasf://wiki/${name}`, provenance: 'Project-authored method; consult cited sources' })),
       risk_register: selected.risks.map(r => ({ ...riskSummary(r), status: 'unverified', severity: 'not_assessed', evidence_refs: [], owner: null })),
       control_backlog: selected.controls.map(c => ({ ...controlSummary(c), ...controlCheck(c), owner: null })),
       architecture_review_candidates: architectureReview(deployment_patterns),

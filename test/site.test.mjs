@@ -11,10 +11,11 @@ const read = path => readFileSync(join(build.output, path), 'utf8');
 after(() => rmSync(temporary, { recursive: true }));
 
 test('static site exposes every source record in HTML and Markdown without JavaScript', () => {
-  assert.equal(build.referenceCount, 170);
+  assert.equal(build.referenceCount, 176);
   assert.equal(build.pageCount, publicSources().length);
   const home = read('index.html');
-  assert.equal((home.match(/<tr data-kind=/g) || []).length, 170);
+  assert.equal((home.match(/<tr data-kind="(?:Risk|Control)"/g) || []).length, 170);
+  assert.equal((home.match(/<tr data-kind="Reference"/g) || []).length, 6);
   for (const page of build.pages) {
     const file = new URL(page.url).pathname.replace('/ai-security-wiki/', '') || 'index.html';
     const html = read(file);
@@ -28,6 +29,22 @@ test('static site exposes every source record in HTML and Markdown without JavaS
     const markdown = read(new URL(page.markdown).pathname.replace('/ai-security-wiki/', ''));
     assert.ok(markdown.includes('# '));
   }
+});
+
+test('research pages, search entries and machine provenance are published together', () => {
+  const home = read('index.html');
+  assert(home.includes('<option value="Reference">Research guides</option>'));
+  for (const path of ['wiki/research/index', 'wiki/research/pentagi', 'wiki/research/cloudflare-security-audit', 'wiki/research/red-blue-field', 'guides/evidence-driven-audit', 'wiki/templates/coverage-ledger']) {
+    assert(home.includes(`${path}.html`));
+    assert(read('llms.txt').includes(`${path}.md`));
+    assert(read('document-index.md').includes(`${path}.md`));
+    assert(read(`${path}.html`).includes('rel="canonical"'));
+    assert(read(`${path}.md`).includes('# '));
+  }
+  const manifest = JSON.parse(read('sources/research.json'));
+  assert.equal(manifest.inspected_on, '2026-10-23');
+  assert.deepEqual(manifest.sources.map(s => s.id), ['S7', 'S8', 'S9']);
+  assert(read('THIRD_PARTY_NOTICES.txt').includes('Copyright (c) 2025-2026 Cloudflare, Inc.'));
 });
 
 test('published internal links, alternates, assets and sitemap resolve to generated files', () => {
