@@ -90,4 +90,3 @@ This is a triage of the returned public set, not a full code audit. Twelve repos
 ## Recheck before reuse
 
 Re-list the profile and record additions/removals. Inspect the chosen repository's current revision, primary authors, actual files and license; a fork's API metadata is not a current upstream audit. Review network effects, credentials, data sent to providers, runtime compatibility and authorization before proposing an executable lab. Keep incident data and raw assessment evidence private.
-

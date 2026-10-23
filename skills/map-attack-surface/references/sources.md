@@ -101,4 +101,3 @@ Jack Whitton, [Obtaining Login Tokens for an Outlook, Office or Azure Account](h
 - CloudRecon appeared in repository metadata, but the branches endpoint returned an empty list and the advertised main branch returned 404. Its functionality was not inspected or inferred from the name.
 
 See the [study guide](../../../wiki/research/jason-haddix.md) and [inventory](../../../wiki/research/jhaddix-inventory.md) for selection decisions and coverage.
-
