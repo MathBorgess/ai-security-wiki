@@ -76,8 +76,39 @@ test('search paginates and all matching rows are recoverable', () => {
     if (page.next_offset === null) break;
     offset = page.next_offset;
   }
-  assert.equal(all.length, 170); assert.equal(new Set(all.map(r => r.id)).size, 170);
+  assert.equal(all.filter(r => r.kind !== 'reference').length, 170);
+  assert.equal(new Set(all.map(r => r.id)).size, all.length);
   assert.equal(invoke('search_knowledge', { query: 'nothing-6a37726b', limit: 1 }).total, 0);
+});
+
+test('supplemental research is discoverable with separate provenance and strict kind filters', () => {
+  for (const [query, name, source] of [['PentestAGI', 'pentagi', 'S7'], ['Cloudflare', 'cloudflare-audit', 'S8'], ['Red Blue Field', 'red-blue-field', 'S9']]) {
+    const result = invoke('search_knowledge', { query, kind: 'reference', limit: 25 });
+    assert(result.results.every(r => r.kind === 'reference'));
+    const record = result.results.find(r => r.name === name);
+    assert(record, `${query} must find its dedicated reading`);
+    assert.equal(record.uri, `dasf://wiki/${name}`);
+    assert.equal(record.provenance.type, 'project-authored-reference');
+    assert(record.provenance.source_ids.includes(source));
+    assert(record.provenance.sources.every(s => /^[a-f0-9]{40}$/.test(s.revision)));
+    assert(!Object.hasOwn(record, 'text'), 'Search returns bounded summaries, not full documents');
+  }
+  assert(invoke('search_knowledge', { query: 'auditoria seguranca', kind: 'reference' }).results.some(r => r.name === 'cloudflare-audit'));
+  assert.equal(invoke('search_knowledge', { query: 'PentAGI', kind: 'risk' }).total, 0);
+  for (const [kind, count] of [['risk', 97], ['control', 73]]) {
+    const found = invoke('search_knowledge', { query: 'DASF', kind });
+    assert.equal(found.total, count);
+    assert(found.results.every(r => r.kind === kind));
+  }
+  assert.equal(invoke('search_knowledge', { query: '^.*$', kind: 'reference' }).total, 0);
+});
+
+test('audit outputs link supplemental methods without changing DASF risk selection', () => {
+  const plan = invoke('build_audit_plan', { deployment_patterns: ['agentic-ai'] });
+  assert.equal(plan.risk_register.length, 35);
+  assert(plan.method_references.some(r => r.name === 'coverage-template'));
+  assert.equal(invoke('investigate_risk', { risk_id: '13.17' }).supplemental_method.name, 'evidence-playbook');
+  assert(plan.risk_register.every(r => r.status === 'unverified'));
 });
 
 test('invalid IDs, injection keys and oversized values fail closed', () => {

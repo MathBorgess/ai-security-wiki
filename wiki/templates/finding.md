@@ -12,6 +12,7 @@ Save actual assessment records in the caller’s private assessment workspace, n
 - **Expected behavior:**
 - **Observed behavior:**
 - **Evidence references:** artifact path or approved locator, relevant excerpt, timestamp; redact secrets
+- **Coverage and verification:** [coverage unit](coverage-ledger.md), discovery identity, separate verifier if used, strongest existing control and exact unresolved facts; do not imply an independent review that did not occur
 - **Reproduction and legitimate comparison:** exact authorized synthetic inputs and outcomes
 - **Impact and reachability:** supported facts, uncertainty and stakeholder assessment
 - **Correction proposal:** enforcement location, minimal change, dependencies, owner
