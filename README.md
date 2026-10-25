@@ -8,7 +8,7 @@ I started this project to study AI security in depth and make defensive knowledg
 
 [Explore the website](https://mathborgess.github.io/ai-security-wiki/) · [Read the wiki](wiki/index.md) · [Português](README.pt-BR.md) · [Audit workflow](wiki/methodology.md) · [MCP setup](docs/mcp.md) · [Contribute](CONTRIBUTING.md)
 
-[![M8ven Score](https://m8ven.ai/badge/mcp/mathborgess/ai-security-wiki)](https://m8ven.ai/mcp/mathborgess/ai-security-wiki?s=readme)
+![M8ven Score](https://m8ven.ai/badge/mcp/mathborgess/ai-security-wiki)
 
 The [M8ven score](https://m8ven.ai/mcp/mathborgess/ai-security-wiki?s=readme) is an external automated assessment, not a security guarantee or certification.
 
